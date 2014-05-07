@@ -1,4 +1,4 @@
 Published
 =========
 
-Repository containing some published works
+Repository containing tools from some publications
