@@ -265,7 +265,7 @@ sub getStart
 # Finds the stop location of the last match/hit
 sub getStop
 {
-  unless(defined(@{$_[0]}))
+  unless(@{$_[0]})
   {
     return 0;
   }
@@ -276,9 +276,6 @@ sub getStop
   {
     # first split by tabs, location then each cousin/child
     my @lineData = split /\t/, $set[$i];
-
-    # 0 vartype 1 chrom 2 start 3 end 4 ref-allele 5 variant-allele
-    my @loc = split /\s/, $lineData[0];
 
     # 0 vartype 1 chrom 2 start 3 end 4 ref-allele 5 variant-allele
     my @loc = split /\s/, $lineData[0];
